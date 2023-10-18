@@ -1,5 +1,11 @@
 import { StatusBar } from "expo-status-bar";
-import { Image, SafeAreaView, StyleSheet, View } from "react-native";
+import {
+  Image,
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  View,
+} from "react-native";
 
 import { LinearGradient } from "expo-linear-gradient";
 
@@ -26,7 +32,14 @@ export const MainLayout = (props: MainLayoutProps) => {
         <Image source={lineTopCorner} style={styles.shapeTopCorner} />
         <Image source={shapeBottomCorner} style={styles.shapeBottomCorner} />
 
-        {props.children}
+        <ScrollView
+          overScrollMode="never"
+          bounces={false}
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={styles.content}
+        >
+          {props.children}
+        </ScrollView>
       </LinearGradient>
     </SafeAreaView>
   );
@@ -36,10 +49,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     position: "relative",
+  },
+  content: {
     alignItems: "center",
     paddingHorizontal: 44,
-    paddingTop: 75,
-    paddingBottom: 35,
+    paddingTop: 60,
+    paddingBottom: 30,
   },
   shapeTopCorner: {
     position: "absolute",

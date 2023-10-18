@@ -1,4 +1,4 @@
-import { StyleSheet, Text } from "react-native";
+import { StyleSheet, Image, Text } from "react-native";
 
 import { useFonts } from "expo-font";
 import { Righteous_400Regular } from "@expo-google-fonts/righteous";
@@ -8,6 +8,9 @@ import { Inter_600SemiBold } from "@expo-google-fonts/inter";
 
 import { Button, Menu } from "./app/components";
 import { MainLayout } from "./app/layout";
+import { colors } from "./app/themes";
+
+const Logo = require("./assets/logo.png");
 
 export default function App() {
   let [fontsLoaded, fontError] = useFonts({
@@ -23,7 +26,12 @@ export default function App() {
 
   return (
     <MainLayout>
+      <Image source={Logo} />
+      <Text style={styles.title}>Digital Dairy Farm</Text>
+
       <Menu />
+
+      <Text style={styles.tagline}>{`“All Things\nOne Place To Manage”`}</Text>
 
       <Button text="GET STARTED" />
     </MainLayout>
@@ -31,12 +39,22 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-    paddingHorizontal: 44,
-    paddingVertical: 35,
+  title: {
+    color: colors.neutral,
+    fontFamily: "Righteous_400Regular",
+    fontSize: 28,
+    lineHeight: 36,
+    textAlign: "center",
+    marginBottom: 30,
+  },
+  tagline: {
+    color: colors.neutral,
+    fontFamily: "Poppins_500Medium",
+    fontSize: 19,
+    fontWeight: "500",
+    lineHeight: 44,
+    textAlign: "center",
+    marginTop: 36,
+    marginBottom: 44,
   },
 });

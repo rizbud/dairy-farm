@@ -28,11 +28,11 @@ export const Menu = () => {
 const styles = StyleSheet.create({
   container: {
     width: "100%",
-    gap: 44,
+    gap: 32,
   },
   row: {
     alignItems: "center",
     flexDirection: "row",
-    gap: 12,
+    gap: 16,
   },
 });
