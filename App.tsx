@@ -1,11 +1,13 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text } from "react-native";
 
 import { useFonts } from "expo-font";
 import { Righteous_400Regular } from "@expo-google-fonts/righteous";
 import { Poppins_500Medium } from "@expo-google-fonts/poppins";
 import { IstokWeb_400Regular } from "@expo-google-fonts/istok-web";
 import { Inter_600SemiBold } from "@expo-google-fonts/inter";
+
+import { Button } from "./app/components";
+import { MainLayout } from "./app/layout";
 
 export default function App() {
   let [fontsLoaded, fontError] = useFonts({
@@ -20,10 +22,11 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
+    <MainLayout>
       <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
+
+      <Button text="GET STARTED" />
+    </MainLayout>
   );
 }
 
@@ -33,5 +36,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    paddingHorizontal: 44,
+    paddingVertical: 35,
   },
 });
