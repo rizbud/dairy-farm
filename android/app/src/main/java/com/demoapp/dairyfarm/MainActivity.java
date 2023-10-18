@@ -1,4 +1,4 @@
-package com.anonymous.demoapp;
+package com.demoapp.dairyfarm;
 
 import android.os.Build;
 import android.os.Bundle;

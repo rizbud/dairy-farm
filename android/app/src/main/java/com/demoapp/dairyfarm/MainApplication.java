@@ -1,4 +1,4 @@
-package com.anonymous.demoapp;
+package com.demoapp.dairyfarm;
 
 import android.app.Application;
 import android.content.res.Configuration;

@@ -81,9 +81,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace 'com.anonymous.demoapp'
+    namespace 'com.demoapp.dairyfarm'
     defaultConfig {
-        applicationId 'com.anonymous.demoapp'
+        applicationId 'com.demoapp.dairyfarm'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
