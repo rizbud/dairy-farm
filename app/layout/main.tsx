@@ -1,19 +1,10 @@
 import { StatusBar } from "expo-status-bar";
-import {
-  Image,
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  View,
-} from "react-native";
+import { Image, SafeAreaView, ScrollView, StyleSheet } from "react-native";
 
 import { LinearGradient } from "expo-linear-gradient";
 
 import { colors } from "../themes";
-
-const shapeBottomCorner = require("../../assets/shape-bottom-corner.png");
-const shapeTopCorner = require("../../assets/shape-top-corner.png");
-const lineTopCorner = require("../../assets/line-top-corner.png");
+import { LineTopCorner, ShapeBottomCorner, ShapeTopCorner } from "../images";
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -28,9 +19,9 @@ export const MainLayout = (props: MainLayoutProps) => {
         colors={[colors.skyBlue, colors.royalPurple]}
         style={styles.container}
       >
-        <Image source={shapeTopCorner} style={styles.shapeTopCorner} />
-        <Image source={lineTopCorner} style={styles.shapeTopCorner} />
-        <Image source={shapeBottomCorner} style={styles.shapeBottomCorner} />
+        <Image source={ShapeTopCorner} style={styles.shapeTopCorner} />
+        <Image source={LineTopCorner} style={styles.shapeTopCorner} />
+        <Image source={ShapeBottomCorner} style={styles.shapeBottomCorner} />
 
         <ScrollView
           overScrollMode="never"

@@ -4,6 +4,7 @@ import {
   type TouchableOpacityProps,
   Text,
 } from "react-native";
+
 import { colors } from "../themes";
 
 interface ButtonProps extends Omit<TouchableOpacityProps, "children"> {

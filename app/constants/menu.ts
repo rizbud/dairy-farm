@@ -1,3 +1,5 @@
+import { Cow, Dairy, Syringe, Wheat } from "../images";
+
 export interface Menu {
   label: string;
   image: any;
@@ -6,18 +8,18 @@ export interface Menu {
 export const MENU: ReadonlyArray<Menu> = [
   {
     label: "Sales",
-    image: require("../../assets/cow.png"),
+    image: Cow,
   },
   {
     label: "Doctors",
-    image: require("../../assets/syringe.png"),
+    image: Syringe,
   },
   {
     label: `Dairy\nManagement`,
-    image: require("../../assets/dairy.png"),
+    image: Dairy,
   },
   {
     label: `Feed\nManagement`,
-    image: require("../../assets/wheat.png"),
+    image: Wheat,
   },
 ];

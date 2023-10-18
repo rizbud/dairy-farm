@@ -1,7 +1,8 @@
 import { StyleSheet, Text, TouchableOpacity, Image } from "react-native";
-import { colors } from "../../themes";
 
 import type { Menu } from "../../constants/menu";
+
+import { colors } from "../../themes";
 
 interface MenuCardProps {
   item: Menu;

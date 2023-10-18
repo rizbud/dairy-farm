@@ -9,8 +9,7 @@ import { Inter_600SemiBold } from "@expo-google-fonts/inter";
 import { Button, Menu } from "./app/components";
 import { MainLayout } from "./app/layout";
 import { colors } from "./app/themes";
-
-const Logo = require("./assets/logo.png");
+import { Logo } from "./app/images";
 
 export default function App() {
   let [fontsLoaded, fontError] = useFonts({
