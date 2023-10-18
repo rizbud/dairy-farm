@@ -6,7 +6,7 @@ import { Poppins_500Medium } from "@expo-google-fonts/poppins";
 import { IstokWeb_400Regular } from "@expo-google-fonts/istok-web";
 import { Inter_600SemiBold } from "@expo-google-fonts/inter";
 
-import { Button } from "./app/components";
+import { Button, Menu } from "./app/components";
 import { MainLayout } from "./app/layout";
 
 export default function App() {
@@ -23,7 +23,7 @@ export default function App() {
 
   return (
     <MainLayout>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Menu />
 
       <Button text="GET STARTED" />
     </MainLayout>
